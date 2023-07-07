@@ -1,0 +1,25 @@
+.example-form-field {
+  width: 100%;
+}
+.dFlexCol {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+.dFlexRow {
+    display: flex;
+    flex-direction: column;
+}
+.dFlex{
+    display: flex;
+}
+.myCard{
+    margin: 2em;
+    border: 1px solid rgba(159, 159, 159, 0.634);
+    border-radius: 7px;
+    padding: 2em;
+}
+.myButton{
+    margin-top: 1em;
+    height: 50px;
+}
