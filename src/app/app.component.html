@@ -1,4 +1,4 @@
-<div class="myCard">
+<div class="myCard" [ngSwitch]="selectedValue">
   <mat-form-field class="example-form-field">
     <mat-label>Select Type</mat-label>
     <mat-select [(ngModel)]="selectedValue" (ngModelChange)="onchange($event)" name="selectedValue">
@@ -7,9 +7,6 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
-</div>
-<div [ngSwitch]="selectedValue" class="myCard">
-
   <form action="" [formGroup]="form1" class="dFlexRow" *ngSwitchCase="'a'" (ngSubmit)="submitdata('a')">
     <h4>First Form</h4>
     <div class="dFlexCol">
@@ -21,7 +18,8 @@
       <mat-form-field class="example-form-field">
         <mat-label>Id</mat-label>
         <input matInput type="text" [(ngModel)]="value1" formControlName="id" readonly="true">
-        <mat-icon *ngIf="!value1" matSuffix (click)="value1=generateRandomCode()" aria-label="Clear">generating_tokens</mat-icon>
+        <mat-icon *ngIf="!value1" matSuffix (click)="value1=generateRandomCode()"
+          aria-label="Clear">generating_tokens</mat-icon>
         <mat-icon *ngIf="value1" matSuffix (click)="value1=''" aria-label="Clear">close</mat-icon>
       </mat-form-field>
     </div>
@@ -35,7 +33,8 @@
       <mat-form-field class="example-form-field">
         <mat-label>Id</mat-label>
         <input matInput type="text" [(ngModel)]="value3" formControlName="id1" readonly="true">
-        <mat-icon *ngIf="!value3" matSuffix (click)="value3=generateRandomCode()" aria-label="Clear">generating_tokens</mat-icon>
+        <mat-icon *ngIf="!value3" matSuffix (click)="value3=generateRandomCode()"
+          aria-label="Clear">generating_tokens</mat-icon>
         <mat-icon *ngIf="value3" matSuffix (click)="value3=''" aria-label="Clear">close</mat-icon>
       </mat-form-field>
     </div>

@@ -45,7 +45,6 @@ export class AppComponent {
         this.form2.reset();
         break;
     }
-
   }
 
   submitdata(key: string) {
